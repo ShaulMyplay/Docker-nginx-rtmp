@@ -100,6 +100,7 @@ cat >>${NGINX_CONFIG_FILE} <<!EOF
             hls_path /tmp/hls;
             hls_fragment    1;
             hls_playlist_length     180m;
+            hls_nested on;
 !EOF
     HLS="false"
 fi
