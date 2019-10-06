@@ -81,7 +81,7 @@ else
     PUSH="true"
 fi
 
-HLS="false"
+HLS="true"
 
 for STREAM_NAME in $(echo ${RTMP_STREAMS}) 
 do
@@ -99,7 +99,7 @@ cat >>${NGINX_CONFIG_FILE} <<!EOF
             hls on;
             hls_path /tmp/hls;
             hls_fragment    1;
-            hls_playlist_length     20;
+            hls_playlist_length     180m;
 !EOF
     HLS="false"
 fi
