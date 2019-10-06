@@ -81,7 +81,7 @@ else
     PUSH="true"
 fi
 
-HLS="false"
+HLS="true"
 
 for STREAM_NAME in $(echo ${RTMP_STREAMS}) 
 do
@@ -101,7 +101,7 @@ cat >>${NGINX_CONFIG_FILE} <<!EOF
             hls_fragment    1;
             hls_playlist_length     180m;
 !EOF
-    HLS="true"
+    HLS="false"
 fi
     if [ "$PUSH" = "true" ]; then
         for PUSH_URL in $(echo ${RTMP_PUSH_URLS}); do
