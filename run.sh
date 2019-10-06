@@ -101,7 +101,7 @@ cat >>${NGINX_CONFIG_FILE} <<!EOF
             hls_fragment    1;
             hls_playlist_length     20;
 !EOF
-    HLS="false"
+    HLS="true"
 fi
     if [ "$PUSH" = "true" ]; then
         for PUSH_URL in $(echo ${RTMP_PUSH_URLS}); do
